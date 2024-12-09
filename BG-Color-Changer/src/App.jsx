@@ -5,7 +5,7 @@ function App() {
 
   return (
     <div
-      className={`h-screen flex justify-center items-center`}
+      className="h-screen flex justify-center items-center"
       style={{ backgroundColor: color }}
     >
       <div
