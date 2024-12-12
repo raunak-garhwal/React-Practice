@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
 function App() {
-    const [length, setLength] = useState(8);
+    const [length, setLength] = useState(12);
     const [numAllowed, setnumAllowed] = useState(true);
     const [charAllowed, setcharAllowed] = useState(true);
     const [password, setPassword] = useState("");
@@ -31,12 +31,12 @@ function App() {
     }, [length, numAllowed, charAllowed, passwordGenerator])
     
     return (
-        <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 text-white min-w-full h-screen flex justify-center items-center flex-col gap-6 text-xl">
-            <div className="text-center text-5xl">Password Generator</div>
+        <div className="bg-gradient-to-b from-[#0c1730]  to-[#032e6b] text-white min-w-full h-screen flex justify-center items-center flex-col gap-6 text-xl">
+            <div className="text-center text-5xl font-mono">PASSWORD GENERATOR</div>
             <div className="flex justify-center items-center flex-col gap-6">
                 <div className="flex justify-center items-center min-w-full">
                     <input
-                        className="min-w-full p-2 rounded-xl text-orange-700 outline-none font-semibold"
+                        className="min-w-full p-2 rounded-l-xl text-orange-700 outline-none font-semibold"
                         type="text"
                         placeholder="Password"
                         value={password}
@@ -47,14 +47,15 @@ function App() {
                     />
 
                     <button 
-                    className="bg-indigo-800 p-2 rounded-xl"
+                    className="bg-blue-800 hover:bg-blue-900 p-2 rounded-r-xl"
                     onClick={copyToClipboard}
                     >
                         Copy
                     </button>
                 </div>
                 <div>
-                    <div className="flex justify-center items-center gap-3">
+                    <div className="flex justify-center items-center gap-8">
+                        <div className="flex justify-center items-center gap-2">
                         <input
                             type="range"
                             name="passlength"
@@ -62,7 +63,9 @@ function App() {
                             onChange={(e) => setLength(e.target.value)}
                         />
                         <label htmlFor="passlength">Length : {length}</label>
+                        </div>
 
+                        <div className="flex justify-center items-center gap-2">
                         <input
                             type="checkbox"
                             name="numAllowed"
@@ -70,8 +73,10 @@ function App() {
                             id="numberscheckbox"
                             onChange={() => setnumAllowed(prev => !prev)}
                             />
-                        <label htmlFor="numberscheckbox">numbers</label>
+                        <label htmlFor="numberscheckbox">Numbers</label>
+                        </div>
 
+                        <div className="flex justify-center items-center gap-2">
                         <input
                             type="checkbox"
                             defaultChecked={charAllowed}
@@ -79,7 +84,8 @@ function App() {
                             id="charscheckbox"
                             onChange={() => setcharAllowed(prev => !prev)}
                         />
-                        <label htmlFor="charscheckbox">characters</label>
+                        <label htmlFor="charscheckbox">Characters</label>
+                        </div>
                     </div>
                 </div>
             </div>
