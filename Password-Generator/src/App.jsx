@@ -50,7 +50,7 @@ function App() {
                     className="bg-blue-800 hover:bg-blue-900 p-2 rounded-r-xl"
                     onClick={copyToClipboard}
                     >
-                        Copy
+                    Copy
                     </button>
                 </div>
                 <div>
