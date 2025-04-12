@@ -1,0 +1,67 @@
+-------------------------------------------------------------------------------------------------------------------
+
+Fiber --->
+
+React BTS uses Fiber algorithm to update the virtual DOM tree.
+
+Incremental Rendering --> the ability to split rendering work into chunks and spread it out over multiple frames.
+
+Key Features :-
+- The ability to pause, abort, or reuse work as new updates come in.
+- The ability to assign priority to different types of updates.
+
+- PUSH based approach allows programmer to schedule work (updates).
+- PULL based approach allows REACT to schedule work (updates).
+
+-------------------------------------------------------------------------------------------------------------------
+
+Hydration --->
+
+When the whole webpage layout is loaded and JS is injected into the webpage to make the page interactive, this process is called Hydration.
+
+-------------------------------------------------------------------------------------------------------------------
+
+Reconciliation --->
+
+The algorithm which react uses to differentiate one tree from other (actual Browser DOM tree vs React virtual DOM tree made from 'createRoot') to determine which parts needs to be updated.
+
+-------------------------------------------------------------------------------------------------------------------
+Redux ToolKit --->
+
+store/store.js :--
+
+configure store (imported from '@reduxjs/toolkit') use krke store create hota hai jisme reducers ke bare mai info hoti hai.
+
+export default store;
+
+-------------------------------------------------------------------------------------------------------------------
+
+features/.../...Slice.js :--
+
+import {createSlice} from '@reduxjs/toolkit'
+
+const initialState = { }
+
+export const ...Slice = createSlice({
+name : '...',
+initialstate,
+reducers:{
+	a:.......
+	b:.......
+    }
+})
+
+export const {a, b} = ...Slice.actions
+export default ...Slice.reducer
+
+-------------------------------------------------------------------------------------------------------------------
+
+This JSON snippet is a redirect rule configuration, typically used in serverless deployment platforms like Vercel or Netlify to define routing behavior for your website or application.
+
+vercel.json file :-
+
+{ "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 }] }
+
+
+-------------------------------------------------------------------------------------------------------------------
+
